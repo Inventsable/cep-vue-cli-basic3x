@@ -1,12 +1,16 @@
 <template>
   <div id="app">
-    <!-- This is the root of your panel -->
-    <!-- Content should go inside #app -->
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <!--
+      This is the root of your panel
+      Content should go inside this #app element 
+    -->
+    <div style="width: 100%; display: flex; justify-content: center;">
+      <img alt="Vue logo" src="./assets/logo.png" />
+    </div>
+    <!--
+      Example of importing a component
+    -->
     <HelloWorld msg="Welcome to Your Vue CLI panel" />
-
-    <!-- Utility component to handle context and flyout menus -->
-    <menus />
   </div>
 </template>
 
@@ -34,6 +38,8 @@ export default {
   mounted() {
     this.csInterface = new CSInterface();
 
+    // Dynamic color handling library.
+    // https://github.com/Inventsable/starlette
     starlette.init();
   },
   methods: {
