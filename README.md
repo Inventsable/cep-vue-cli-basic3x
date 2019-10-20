@@ -181,15 +181,6 @@ For the most part, you don't need to alter or modify any file/folder not shown b
 
 ## Common errors:
 
-### require is not a function/defined
-
-- If wanting to use `require()` or `process` in both Developer and Production, you need to assign them manually in each .vue file (due to being nested in an iframe) like so:
-
-```js
-const require = cep_node.require || require;
-const fs = require("fs"); // Now available in both
-```
-
 ### Panel is not updating
 
 - Adding or reorganizing components may cause hot reloading to fail. Many times you will be warned of this in `CEF debug`'s console, fix this by hitting `^C` in your active terminal to `Terminae batch job`, then run `npm run serve` once more and refresh the panel.
